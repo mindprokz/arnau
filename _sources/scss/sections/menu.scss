@@ -1,6 +1,6 @@
 #menu {
-  background: #f7f3ef;
-  height: 90px;
+  background: url('images/texture_menu.jpg');
+  height: 105px;
   position: absolute;
   top: 0;
   left: 0;
@@ -18,6 +18,10 @@
     width: 100%;
   }
 
+  @media (max-width: 970px) {
+    height: 90px;
+  }
+
   .container {
     position: relative;
   }
@@ -32,36 +36,34 @@
   nav:not(.mobile_menu) {
     display: none;
 
-    @media (min-width: 750px) {
-      width: 250px;
-      display: block;
-
-      a {
-        font-size: 14px;
-      }
-    }
-
-    @media (min-width: 970px) {
-      width: 310px;
-
-      a {
-        font-size: 18px;
-      }
-    }
-
-    @media (min-width: 1170px) {
-      width: 430px;
-    }
-
     a {
-      font-family: 'Philosopher', sans-serif;
-      display: inline-block;
-      width: 33.3333%;
       text-align: center;
       text-transform: uppercase;
       cursor: pointer;
       text-decoration: none;
       color: #1d1d1d;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    @media (min-width: 750px) {
+      width: 265px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    @media (min-width: 970px) {
+      width: 374px;
+
+      a {
+        background: url('images/dot_button.png') no-repeat 3% 47%, url('images/dot_button.png') no-repeat 97% 47%, url('images/texture_button.jpg');
+        padding: 13px 30px;
+        color: #fff;
+      }
+    }
+
+    @media (min-width: 1170px) {
+      width: 430px;
     }
   }
 
@@ -79,7 +81,6 @@
   .lang {
     position: absolute;
     top: 6px;
-    font-family: 'Philosopher', sans-serif;
     right: 100px;
 
     a {
@@ -92,7 +93,7 @@
     }
 
     @media (min-width: 750px) {
-      right: 120px;
+      right: 137px;
       top: 18px;
 
       a {
@@ -102,7 +103,7 @@
     }
 
     @media (min-width: 970px) {
-      right: 200px;
+      right: 253px;
     }
 
     @media (min-width: 1170px) {
@@ -113,15 +114,13 @@
   .social {
     position: absolute;
     top: 33px;
-    left: 40px;
 
     @media (min-width: 750px) {
       top: 14px;
-      left: 25px;
+      right: 14px;
     }
 
     @media (min-width: 970px) {
-      left: unset;
       right: 15px;
     }
 
@@ -176,6 +175,35 @@
 
     @media (max-width: 750px) {
       display: table;
+    }
+  }
+
+  .num {
+    display: none;
+    position: absolute;
+    top: 5px;
+    padding: 5px 15px;
+    color: #1d1d1d;
+    font-size: 18px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    img {
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+
+    @media (min-width: 750px) {
+      display: block;
+      left: 56px;
+    }
+
+    @media (min-width: 970px) {
+      left: 177px;
+    }
+
+    @media (min-width: 1170px) {
+      left: 222px;
     }
   }
 }

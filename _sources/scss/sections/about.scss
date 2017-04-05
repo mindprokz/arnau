@@ -2,7 +2,8 @@
   text-align: center;
   padding-top: 40px;
   padding-bottom: 50px;
-  background: #ececec;
+  background: url('images/texture_about.jpg');
+  overflow: hidden;
 
   @media (min-width: 970px) {
     padding-top: 70px;
@@ -10,28 +11,28 @@
   }
 
   .shape {
-    margin-bottom: 35px;
+    margin: 0 auto 45px;
+    height: 48px;
+    position: relative;
 
-    @media (min-width: 750px) {
-      margin-bottom: 60px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
   h3 {
-    margin-bottom: 55px;
+    margin-bottom: 25px;
     text-transform: uppercase;
     color: #5c2800;
-    font-family: 'PT Serif', serif;
     font-size: 35px;
-
-    @media (min-width: 970px) {
-      margin-bottom: 100px;
-    }
   }
 
   p {
-    font-family: Arial;
-    color: #2b2b2b;
+    font-style: italic;
+    color: #514226;
     font-size: 17px;
     width: 100%;
     margin: auto;
@@ -39,21 +40,23 @@
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: border-box;
+    line-height: 20pt;
 
     @media (min-width: 750px) {
-      width: 585px;
-      padding-left: 0;
-      padding-right: 0;
       font-size: 18px;
+      line-height: 22pt;
     }
   }
 
   .video_link {
-    color: #5c2800;
-    font-family: 'PT Serif', serif;
-    border-bottom: 1px solid;
     text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
     font-weight: 700;
+    background: url('images/dot_button.png') no-repeat 3% 47%, url('images/dot_button.png') no-repeat 97% 47%, url('images/texture_button.jpg');
+    padding: 13px 40px;
+    color: #fff;
+    border-radius: 25px;
+    border: 3px solid #eecf95;
   }
 }

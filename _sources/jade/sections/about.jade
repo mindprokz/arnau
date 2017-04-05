@@ -1,7 +1,23 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var header = 'О ресторане'
+    - var text = 'Кулинарная концепция ресторана - высокая казахская национальная кухня, изысканная и по-домашнему вкусная. Модный интерьер с национальными мотивами покоряет своим уютом и великолепием, а живая музыка с колоритным звучанием казахских народных инструментов создает особенное настроение.'
+    - var button = 'Посмотреть видео'
+  when 'eng'
+    - var header = 'About'
+    - var text = 'Culinary concept of the restaurant is a high Kazakh cuisine, sophisticated and homemade tasty. Fashionable interior of national style conquer with its coziness and magnificence, and live music with colourful sound of Kazakh folk instruments creates the special mood.'
+    - var button = 'Video'
+  when 'kz'
+    - var header = 'Мейрамхана туралы'
+    - var text = 'Мейрамхананың аспаздық тұжырымдамасы – қазақ халқының кәделі ұлттық тағамдары, таңдаулы және ерекше дәмді. Ұлттық нақышта әрленген сәнді интерьер  тартымдылығы және асқан әдемілігімен баурайды, қазақ халық аспаптары үнімен үйлескен жанды әуен көңіл-күйді көтереді.'
+    - var button = 'Бейне қарау'
+
 section#about
   a(name="about")
   .container
-    img(src="images/log.png").shape
-    h3 О ресторане
-    p Изысканность и гармоничная утонченность – слова, как нельзя лучше подходящие для описания ресторана «Kiku Matsuri». Современный дизайн и сдержанный японский минимализм создают уникальность интерьера.
-    a(href="https://www.youtube.com/embed/woVUvj8WeLA?autoplay=1" class="fancybox fancybox.iframe").video_link Посмотреть видео
+    h3 #{header}
+    .shape
+      img(src="images/about_separator.png")
+    p #{text}
+    a(href="https://www.youtube.com/embed/c1AM9THbZwU?autoplay=1" class="fancybox fancybox.iframe").video_link #{button}

@@ -1,12 +1,157 @@
 #map {
-  height: 450px;
-  overflow: hidden;
+  position: relative;
+  height: 955px;
 
-  @media (min-width: 750px) {
-    height: 520px;
+  a {
+    color: #ffbe5f;
+    text-decoration: underline;
   }
 
   @media (min-width: 970px) {
-    height: 700px;
+    height: 480px;
+  }
+
+  .bg_texture {
+    width: 100%;
+    height: 50%;
+    background: url('images/texture_contactjpg.jpg');
+    overflow: hidden;
+    position: relative;
+
+    @media (min-width: 970px) {
+      width: 50%;
+      height: 100%;
+      float: left;
+    }
+  }
+
+  .map {
+    height: 50%;
+    width: 100%;
+
+    @media (min-width: 970px) {
+      height: 100%;
+      width: 50%;
+      float: right;
+    }
+  }
+
+  .container {
+    @media (min-width: 970px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: table;
+      padding-left: 15px;
+
+      .info {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .dot {
+    display: none;
+
+    @media (min-width: 970px) {
+      display: inline;
+      position: absolute;
+      top: -17px;
+      left: calc(50% - 17px);
+    }
+  }
+
+  .info {
+    color: #fff;
+    text-align: center;
+    padding-top: 40px;
+
+    @media (min-width: 970px) {
+      text-align: left;
+      padding-top: 0;
+    }
+
+    .upper {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 35px;
+      padding-bottom: 45px;
+    }
+
+    .text {
+      padding-bottom: 16px;
+      font-size: 17px;
+    }
+
+    .line {
+      background: #7a7164;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      height: 3px;
+      width: 75px;
+      visibility: hidden;
+
+      @media (min-width: 970px) {
+        visibility: visible;
+      }
+    }
+
+    .letter {
+      img {
+        vertical-align: sub;
+        margin-right: 25px;
+      }
+
+      a {
+        color: #ffbe5f;
+        text-decoration: underline;
+        font-size: 17px;
+      }
+    }
+
+    .plain {
+      padding-bottom: 25px;
+
+      span {
+        font-size: 25px;
+        padding-right: 15px;
+      }
+    }
+  }
+
+  footer {
+    .left {
+      width: 50%;
+      float: left;
+      font-size: 17px;
+    }
+
+    img {
+      float: right;
+
+      @media (min-width: 750px) {
+        margin-left: 85px;
+        vertical-align: sub;
+        float: none;
+      }
+    }
+
+    @media (min-width: 750px) {
+      .left {
+        width: auto;
+        float: none;
+        font-size: 16px;
+      }
+    }
   }
 }

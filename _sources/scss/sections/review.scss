@@ -1,5 +1,5 @@
 #review {
-  background: #fff;
+  background: #efe6d4;
   padding-top: 50px;
   padding-bottom: 46px;
   text-align: center;
@@ -27,8 +27,11 @@
 
     a {
       color: #5c2800;
-      font-family: 'Philosopher', sans-serif;
       font-style: italic;
+    }
+
+    &.review_trap {
+      font-size: 20px;
     }
   }
 
@@ -50,7 +53,7 @@
       }
 
       @media (min-width: 865px) {
-        height: 140px;
+        height: 165px;
       }
 
       h4 {
@@ -65,7 +68,6 @@
       }
 
       p {
-        font-family: 'Philosopher', sans-serif;
         font-size: 17px;
         line-height: 25px;
         font-style: italic;

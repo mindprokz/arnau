@@ -1,2 +1,71 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var header = 'Контакты'
+    - var adress_h = 'Адрес: '
+    - var adress_p = 'Астана, пр. Туран 30, здание Fitness Palace '
+    - var tel = 'Телефон: '
+    - var work_hours_h = 'Режим работы: '
+    - var work_hours_p = 'с 12:00 до 01:00, ежедневно'
+    - var write_us = 'Напишите нам на почту'
+    - var plain = 'Схема зала:'
+    - var plain_1 = '1 этаж'
+    - var plain_2 = '2 этаж'
+    - var footer = "Национальный ресторан «Arnau» — 2016"
+  when 'eng'
+    - var header = 'About'
+    - var adress_h = 'Адрес: '
+    - var adress_p = 'Astana, 30 Turan avenue (Fitness Palace building)'
+    - var tel = 'Phone: '
+    - var work_hours_h = 'Working hours: '
+    - var work_hours_p = ' from 12 till 01, daily'
+    - var write_us = 'Write the e-mail to us'
+    - var plain = 'Hall plan:'
+    - var plain_1 = '1 floor'
+    - var plain_2 = '2 floor'
+    - var footer = "National restaurant «Arnau» — 2016"
+  when 'kz'
+    - var header = 'Мейрамхана туралы'
+    - var adress_h = 'Адрес: '
+    - var adress_p = 'Астана, Тұран даңғылы, 30 (Fitness Palace ғимараты)'
+    - var tel = 'Телефон: '
+    - var work_hours_h = 'Жұмыс уақыты: '
+    - var work_hours_p = 'күнделікті 12.00-ден 01.00-ге дейін'
+    - var write_us = 'Біздің поштаға жазыңыздар'
+    - var plain = 'Залдың сызбасы:'
+    - var plain_1 = '1 қабат'
+    - var plain_2 = '2 қабат'
+    - var footer = "Национальный ресторан «Arnau» — 2016"
+
 section#map
   a(name="contact")
+  #map_content.map
+  .bg_texture
+    .container
+      .info
+        h2 #{header}
+        .text
+          span.upper #{adress_h}
+          span #{adress_p}
+        .text
+          span.upper #{tel}
+          span 8 (7172) 279-111, 8 (701) 100-07-04
+        .text
+          span.upper #{"E-mail: "}
+          a(href="#").feed_open_fc: span nat.res.arnau@gmail.com
+        .text
+          span.upper #{work_hours_h}
+          span #{work_hours_p}
+        .line
+        .letter
+          img(src="images/letter.png")
+          a(href="#").feed_open_fc: span #{write_us}
+        .line
+        .plain
+          span.upper #{plain}
+          a(href="images/shema1.jpg" class="fancybox"): span #{plain_1}
+          a(href="images/shema2.jpg" class="fancybox"): span #{plain_2}
+        footer
+          span.left #{footer}
+          img(src="images/logo_mind.png")
+  a(href="http://mindpro-group.com" target="_blank"): img(src="images/dot.png").dot

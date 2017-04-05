@@ -1,40 +1,78 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var head = 'Ознакомьтесь с отзывами'
+    - var subhead = 'наших гостей на сайте TripAdvisor'
+    - var head_com_1 = 'Отлично. Просто великолепно.'
+    - var text_com_1 = 'Обслуживание на высшем уровне. Интерьер выше всяких похвал. Национальная кухня великолепна. Отличное место для ужина и свидания.'
+    - var head_com_2 = 'Отличное завершение поездки'
+    - var text_com_2 = 'Отличный сервис, вкусная национальная кухня, располагающий интерьер. Нас обслуживала Гульмира, очень вежливая девушка, помогла определится с блюдами, посоветовала местное вино. Обязательно порекомендуем Вас своим знакомым!'
+    - var head_com_3 = 'Национальная кухня'
+    - var text_com_3 = 'Бесспорно лучший национальный ресторан. Если впервые в Казахстане то вам сюда. Еда действительно вкусная. Интерьер впечатляет. Живая музыка создаёт расслабляющую атмосферу.'
+    - var head_com_4 = 'Хорошее место для делового ужина'
+    - var text_com_4 = 'Очень приятное впечатление осталось от посещения этого ресторана. Насколько мы сумели понять по меню, национальная кухня представлена достаточно неплохо. Еду приготовили быстро и прекрасно, отличное, сочное мясо.'
+    - var review = 'Больше отзывов на сайте — '
+  when 'eng'
+    - var head = 'Read the comments of'
+    - var subhead = 'our guests at TripAdvisor'
+    - var head_com_1 = 'Excellent. Just perfect.'
+    - var text_com_1 = 'Service at a very high level. Interior is beyond praises. National cuisine is perfect. Good place for dinner and dating.'
+    - var head_com_2 = 'Good trip completing'
+    - var text_com_2 = 'Great service, tasty national cuisine, good interior. Our waiter was Gulmira, very polite girl, helped us to choose dishes, who gave some recommendations concerning wine. I will recommend you to my friends!'
+    - var head_com_3 = 'National cuisine'
+    - var text_com_3 = 'Absolutely perfect national restaurant. If you are firstly in Kazakhstan, visit it. Really tasty food. Impressive interior. Life music makes relaxing atmosphere.'
+    - var head_com_4 = 'Good place for business diner'
+    - var text_com_4 = 'Very impressed after visiting this restaurant. As we could understand it has a wide assortment of national cuisine. Food was promptly and perfectly prepared, excellent  and toothsome steak'
+    - var review = 'More comments at — '
+  when 'kz'
+    - var head = 'TripAdvisor сайтындағы біздің'
+    - var subhead = 'қонақтардың пікіріне зер салыңыз'
+    - var head_com_1 = 'Өте жақсы. Айтарға сөз жоқ.'
+    - var text_com_1 = 'Қызмет көрсетуі жоғары деңгейде. Интерьері келісті. Ұлттық асханасына көңіл толады. Кешкі ас пен кездесуге қолайлы жер.'
+    - var head_com_2 = 'Іссапардың жақсы аяқталуы.'
+    - var text_com_2 = 'Сервис жақсы ұйымдастырылған, ұлттық асхананың тағамдары дәмді, интерьері ыңғайлы. Бізге Гүлмира деген сыпайы қыз қызмет көрсетті, ас мәзіріне таңдау жасауға көмектесті, жергілікті шараптың дәмін татып көруге кеңес берді. Өзімнің таныстарыма да осы жерді ұсынамын.'
+    - var head_com_3 = 'Ұлттық асхана'
+    - var text_com_3 = 'Ең жақсы ұлттық мейрамхана екендігі даусыз. Егер Қазақстанға бірінші рет келіп тұрсаңыз, осы жерді таңдаңыз. Тағамдары шынымен дәмді. Интерьері де көңіл-күйге әсер етеді. Ішіндегі жанды музыка адамды сергітеді.'
+    - var head_com_4 = 'Іскерлік кешкі ас ішкенге қолайлы'
+    - var text_com_4 = 'Бұл мейрамхана адамға өзіндік әсер қалдырады. Ас мәзіріндегі ұлттық тағамдардың қатары мол. Тапсырыс берген асты жылдам әкелді, дәмі де тамаша, жас еттен әзірленген.'
+    - var review = 'Cайтында пікірлер саны көп '
 section#review
   a(name="review")
   .container
-    h2 Ознакомьтесь с отзывами
-    h3 наших гостей на сайте TripAdvisor
+    h2 #{head}
+    h3 #{subhead}
     ul
       li
-        h4: span Отличная казахская Еда!
-        p Ужин в отдельной комнате - чудесный опыт, каждое блюдо было просто восхитительным и хорошо обставлен. Определенно вернемся!
+        h4: span #{head_com_1}
+        p #{text_com_1}
       li
-        h4: span Просто отличный
-        p Отличная атмосфера, красивое место, хорошее оформление. Какое восхитительное место! Extraordinairy дружелюбный и профессиональный персонал и еда была просто восхитительным.
+        h4: span #{head_com_2}
+        p #{text_com_2}
       li
-        h4: span Очень хороший ресторан
-        p Приятная атмосфера, хорошая еда, живет традиционная музыка. Персонал говорит на английском языке. Очень удобно для бизнеса или для удовольствия.
+        h4: span #{head_com_3}
+        p #{text_com_3}
       li
-        h4: span Традиционная и вкусная еда
-        p Мы приехали сюда на традиционной еды, а не высокого класса западных тематических ресторанов, и мы не разочарованы.
-    h3
-      span Больше отзывов на сайте — 
+        h4: span #{head_com_4}
+        p #{text_com_4}
+    h3.review_trap
+      span #{review}
       a(href="http://www.tripadvisor.ru") www.tripadvisor.ru
     .trapvisor
       .reviews
-        |<div id="TA_rated612" class="TA_rated">
-        |<ul id="PN4Bsqedx" class="TA_links BaLsAYW5tE">
-        |<li id="nSSZRXsZqSoz" class="R5w0DaDwCOHz">
+        |<div id="TA_rated284" class="TA_rated">
+        |<ul id="i4CSvPRQ" class="TA_links vLCXiynZbJw">
+        |<li id="Ay8grc" class="hcoH0E8joXBf">
         |<a target="_blank" href="https://www.tripadvisor.ru/"><img src="https://www.tripadvisor.ru/img/cdsi/img2/badges/ollie-11424-2.gif" alt="TripAdvisor"/></a>
         |</li>
         |</ul>
         |</div>
-        |<script src="https://www.jscache.com/wejs?wtype=rated&amp;uniq=612&amp;locationId=6704343&amp;lang=ru&amp;display_version=2"></script>
+        |<script src="https://www.jscache.com/wejs?wtype=rated&amp;uniq=284&amp;locationId=8333136&amp;lang=ru&amp;display_version=2"></script>
       .reviews
-        |<div id="TA_cdswritereviewnew279" class="TA_cdswritereviewnew">
-        |<ul id="5E7Nl0KLiwC" class="TA_links 5BQGJgFR9">
-        |<li id="59HVgIeCvb4" class="l71aSLr">
+        |<div id="TA_cdswritereviewnew97" class="TA_cdswritereviewnew">
+        |<ul id="SOVHXjML" class="TA_links SXckQC4g">
+        |<li id="gW0d8e72" class="ou3pmST">
         |<a target="_blank" href="https://www.tripadvisor.ru/"><img src="https://www.tripadvisor.ru/img/cdsi/img2/branding/medium-logo-29834-2.png" alt="TripAdvisor"/></a>
         |</li>
         |</ul>
         |</div>
-        |<script src="https://www.jscache.com/wejs?wtype=cdswritereviewnew&amp;uniq=279&amp;locationId=6704343&amp;lang=ru&amp;lang=ru&amp;display_version=2"></script>
+        |<script src="https://www.jscache.com/wejs?wtype=cdswritereviewnew&amp;uniq=97&amp;locationId=8333136&amp;lang=ru&amp;lang=ru&amp;display_version=2"></script>

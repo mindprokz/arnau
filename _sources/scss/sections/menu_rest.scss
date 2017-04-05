@@ -1,18 +1,38 @@
 #menu_rest {
-  background: #f9f9f9;
+  background: url('images/texture_about.jpg');
   text-align: center;
   padding-top: 50px;
-  padding-bottom: 140px;
+  padding-bottom: 100px;
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
 
+  .container {
+    @media (min-width: 970px) {
+      width: 800px;
+    }
+  }
+
   h2 {
     text-transform: uppercase;
     color: #5c2800;
-    font-family: 'PT Serif', serif;
     padding-bottom: 60px;
     font-size: 35px;
+  }
+
+  .button {
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    display: block;
+    margin: 95px auto 0;
+    width: 250px;
+    background: url('images/dot_button.png') no-repeat 3% 47%, url('images/dot_button.png') no-repeat 97% 47%, url('images/texture_button.jpg');
+    padding: 13px 40px;
+    color: #fff;
+    border-radius: 25px;
+    border: 3px solid #eecf95;
   }
 
   .sl_menu {
@@ -32,11 +52,10 @@
         text-transform: uppercase;
         width: 100%;
         position: absolute;
-        font-family: 'PT Serif', serif;
         color: #5c2800;
         font-size: 20px;
         bottom: 0;
-        background: rgba(#fff, 0.5);
+        background: url('images/shape.png');
       }
     }
   }
@@ -77,28 +96,30 @@
   }
 
   .slick-dots {
-    bottom: -80px;
-
-    @media (min-width: 970px) {
-      bottom: -50px;
-    }
+    width: 341px;
+    height: 37px;
+    background: url("images/shape_menu_rest_list.png") no-repeat 0 -10px;
+    padding-top: 5px;
+    bottom: -37px;
+    left: 50%;
+    transform: translateX(-50%);
 
     li {
       width: 22px;
       height: 22px;
-      margin-left: 7px;
-      margin-right: 7px;
+      margin-left: 4px;
+      margin-right: 4px;
 
       &.slick-active {
         button {
-          width: 22px;
-          height: 22px;
+          width: 17px;
+          height: 18px;
 
           &::before {
             content: '';
-            width: 22px;
-            height: 22px;
-            background: #6d2400;
+            width: 17px;
+            height: 18px;
+            background: url('images/dot_shape.png');
             border-radius: 50%;
             opacity: 1;
           }
